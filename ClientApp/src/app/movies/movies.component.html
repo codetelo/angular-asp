@@ -1,0 +1,28 @@
+<h1>Movies</h1>
+<a class="navButton" href="movies/create">Create New Movie</a>
+
+
+<p *ngIf="!movies"><em>Loading...</em></p>
+
+
+
+<table class='table table-striped' *ngIf="movies">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Genre</th>
+      <th>Price</th>
+      <th>Release Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{ movie.title }}</td>
+      <td>{{ movie.genre}}</td>
+      <td>{{ movie.price }}</td>
+      <td>{{movie.releaseDate}}</td>
+      <td><span class="edit" (click)="edit(movie.id)"><i class="fas fa-edit"></i></span><span class="delete" (click)="delete(movie)"><i class="fas fa-trash-alt"></i></span></td>
+    </tr>
+  </tbody>
+</table>

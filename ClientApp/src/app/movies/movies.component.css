@@ -1,0 +1,28 @@
+.navButton{
+    background-color:rgb(197, 38, 38);
+    color:white;
+    font-weight:700;
+    padding:10px;
+    text-decoration:none;
+    border-radius:5px;
+    margin:10px 0 !important;
+    display:block;
+    text-align:center;
+    width:180px;
+}
+
+.edit{
+    margin:0 10px 0 0;
+    font-size:20px;
+}
+.edit:hover{
+    cursor:pointer;
+}
+
+.delete{
+    font-size:20px;
+}
+
+.delete:hover{
+    cursor:pointer;
+}
