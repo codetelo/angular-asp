@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 using angular_asp.Models;
 using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace angular_asp
 {
@@ -24,8 +25,8 @@ namespace angular_asp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-             services.AddDbContext<MvcMovieContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("MovieContext")));
+             services.AddDbContextPool<MvcMovieContext>(options =>
+                options.UseMySql(Configuration.GetConnectionString("MovieContext")));
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

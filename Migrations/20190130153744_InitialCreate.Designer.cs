@@ -25,7 +25,7 @@ namespace angular_asp.Migrations
 
                     b.Property<string>("Genre");
 
-                    b.Property<decimal>("Price");
+                    b.Property<float>("Price");
 
                     b.Property<DateTime>("ReleaseDate");
 
