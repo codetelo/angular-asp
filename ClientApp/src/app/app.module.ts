@@ -48,7 +48,7 @@ import {EditComponent} from './movies/edit/edit.component';
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'movies', component: MoviesComponent },
       { path: 'movies/create', component: CreateComponent },
-      { path: 'movies/edit/:id', component: EditComponent },
+      { path: 'movies/edit/:id', component: EditComponent }
     ])
   ],
   providers: [ CategoryService, LegendService, TooltipService, DataLabelService, LineSeriesService,ScatterSeriesService ],
